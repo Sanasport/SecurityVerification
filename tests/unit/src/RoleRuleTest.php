@@ -49,7 +49,7 @@ class RoleRuleTest extends Unit
 
         $this->firewallHandle
             ->getIdentity
-            ->returns(new Identity(null, ['role']));
+            ->returns(new Identity(1, ['role']));
 
         $this->handler->checkRule($rule, $request);
     }
@@ -62,7 +62,7 @@ class RoleRuleTest extends Unit
 
         $this->firewallHandle
             ->getIdentity
-            ->returns(new Identity(null, []));
+            ->returns(new Identity(1, []));
 
         try {
             $this->handler->checkRule($rule, $request);

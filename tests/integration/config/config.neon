@@ -1,10 +1,12 @@
 extensions:
     nette.application: Nette\Bridges\ApplicationDI\ApplicationExtension
     nette.cache: Nette\Bridges\CacheDI\CacheExtension(%tempDir%)
+    nette.latte: Nette\Bridges\ApplicationDI\LatteExtension(%tempDir%)
     nette.http: Nette\Bridges\HttpDI\HttpExtension
     nette.routing: Nette\Bridges\ApplicationDI\RoutingExtension
     nette.session: Nette\Bridges\HttpDI\SessionExtension
-    kdyby.annotations: Kdyby\Annotations\DI\AnnotationsExtension
+    nettrine.annotations: Nettrine\Annotations\DI\AnnotationsExtension
+    nettrine.cache: Nettrine\Cache\DI\CacheExtension
     arachne.serviceCollections: Arachne\ServiceCollections\DI\ServiceCollectionsExtension
     arachne.verifier: Arachne\Verifier\DI\VerifierExtension
     arachne.security: Arachne\Security\DI\SecurityExtension
